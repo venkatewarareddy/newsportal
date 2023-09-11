@@ -15,15 +15,17 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
+import org.apache.sling.servlets.annotations.SlingServletPaths;
 import org.apache.sling.servlets.annotations.SlingServletResourceTypes;
 import org.osgi.service.component.annotations.Component;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 @Component(immediate=true,service =Servlet.class )
-@SlingServletResourceTypes(resourceTypes="newsportal/componenets/helloworld",extensions="txt",
+/*@SlingServletResourceTypes(resourceTypes="newsportal/componenets/helloworld",extensions="txt",
                            selectors="customs",
-                           methods=HttpConstants.METHOD_GET)
+                           methods=HttpConstants.METHOD_GET)*/
+@SlingServletPaths(value="/bin/newsportal/custome")
 
 public class CustomServlet extends  SlingAllMethodsServlet {
 	private static final Logger log = LoggerFactory.getLogger(CustomServlet.class);

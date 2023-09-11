@@ -1,0 +1,36 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.js @ categories='fruits'}"/>
+
+
+<sly data-sly-use.model="com.gofortrainings.newsportal.core.models.Fruits"/>
+
+<h1>${model.fruittitle}</h1>
+
+<h2>${model.description}</h2>
+
+<img src="${model.image}"/><br>
+
+<i>${model.data}</i><br>
+
+<i>${model.message}</i>
+
+<br>
+
+<h1>OHTER FRUITS</h1>
+
+
+<ul data-sly-list.different="${model.diff}">
+   <li>${different.others}</li>
+   <li><a href="${different.othersimage}">This is link</a></li>
+
+</ul>
+
+<form id="fulltext-search" action="/newsportal/components/fruits" method="POST" accept-charset="UTF-8"> 
+
+<label for="searchterm">Enter any key to search</label><br>
+
+ <input type="text" id="keyword" name="keyword" id="keyword"><br> 
+
+<input title="Search" type="submit" value="Search">
+
+</form>

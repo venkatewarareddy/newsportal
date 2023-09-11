@@ -9,7 +9,7 @@ public @interface CustomConf {
 	public  String date() default "12";
 	
 	@AttributeDefinition(name = "jani", description = "What is current month", required = true)
-	public String jani() default " Feb ";
+	public String jani() default "MAY";
 	
 	
 	

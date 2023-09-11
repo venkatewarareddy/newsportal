@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Text"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <text
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Text"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldDescription="VR"
+                fieldLabel="Text"
+                name="./text"/>
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <tab1
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab1"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <text
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tab1"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Text1"
+                                name="./new1"/>
+                            <text1
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tab1"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Text1"
+                                name="./new2"/>
+                        </items>
+                    </tab1>
+                    <tab2
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab2"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <text
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tab2"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Text2"
+                                name="./new"/>
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Tab2"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/fileupload"
+                                fieldLabel="Image"
+                                name="./image"/>
+                            <select
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="select"
+                                name="./select">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <venkat1
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="venkat1"
+                                        text="venkat1"
+                                        value="venky"/>
+                                    <venkat2
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="venkat"
+                                        text="venkat2"
+                                        value="venky1"/>
+                                </items>
+                            </select>
+                        </items>
+                    </tab2>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

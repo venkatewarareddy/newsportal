@@ -1,0 +1,32 @@
+<sly data-sly-use.custommodel="com.gofortrainings.newsportal.core.models.Custom"/>
+<img src="${properties.customImg}"></img>
+
+<h1>${custommodel.customTitle}</h1>
+
+<p>${custommodel.customDescription}</p>
+
+<p>${custommodel.dropdown}</p>
+
+<b>${custommodel.customcheck}</b>
+
+<p>${custommodel.maliS}</p>
+<p>${custommodel.maliT}</p>
+
+<p>${custommodel.message}</p>
+
+<sly data-sly-list.model=${custommodel.socialMedia}>
+        <h1><a href="${model.facebook}">FACEBOOK</a></h1>
+        <h1>${model.instagram}</h1>
+</sly>
+${properties.text@context='html'}
+
+
+${'yyyy-MM-dd HH:mm:ss.SSSXXX' @ format=properties.date,timezone='GMT+02:00'}
+
+
+
+
+
+
+
+

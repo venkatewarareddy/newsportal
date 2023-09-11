@@ -1,0 +1,16 @@
+<sly data-sly-use.admodel="com.gofortrainings.newsportal.core.models.ArticleDetails"/>
+     <h1>${admodel.articleTitle}</h1>
+     <h2>${admodel.articleDecs}</h2>
+     <img src="${admodel.articleImg}"/>
+ <h1>Links</h1>
+<ul data-sly-list.media="${admodel.socialLink}">
+   <li>${media.socialMedia}</li>
+   <li><a href="${media.socialLinks}">This is  link</a></li>
+</ul>
+
+
+
+
+
+
+

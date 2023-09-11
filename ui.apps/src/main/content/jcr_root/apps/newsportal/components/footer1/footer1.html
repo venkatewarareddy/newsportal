@@ -1,0 +1,9 @@
+<div class="footer-widget">
+<h3 class="title">${properties.quick}</h3>
+  <ul <sly data-sly-list.f2="${resource.getChildren}">
+       <sly data-sly-list.foo2="${f2.getChildren}">
+           <li><a href="#">${foo2.others}</a></li>
+      </sly>
+       </sly>
+   </ul>
+</div>

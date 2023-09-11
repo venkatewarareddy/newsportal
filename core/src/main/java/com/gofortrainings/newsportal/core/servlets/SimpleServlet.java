@@ -22,6 +22,7 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.servlets.HttpConstants;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
+import org.apache.sling.servlets.annotations.SlingServletPaths;
 import org.apache.sling.servlets.annotations.SlingServletResourceTypes;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.propertytypes.ServiceDescription;
@@ -37,11 +38,12 @@ import java.io.IOException;
  * idempotent. For write operations use the {@link SlingAllMethodsServlet}.
  */
 @Component(service = { Servlet.class })
-@SlingServletResourceTypes(
+/*@SlingServletResourceTypes(
         resourceTypes="newsportal/components/page",
         methods=HttpConstants.METHOD_GET,
         extensions="txt")
-@ServiceDescription("Simple Demo Servlet")
+@ServiceDescription("Simple Demo Servlet")*/
+@SlingServletPaths(value={"/bin/newsportal/service/recent-articles","/bin/newsportal/service/popular-articles","/newsportal/most-articles"})
 public class SimpleServlet extends SlingSafeMethodsServlet {
 
     private static final long serialVersionUID = 1L;

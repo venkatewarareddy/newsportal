@@ -1,23 +1,31 @@
 package com.gofortrainings.newsportal.core.models;
 
+import javax.annotation.PostConstruct;
+
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
-@Model(adaptables=Resource.class,defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-
-public class OtherFruits {
+@Model(adaptables=Resource.class,defaultInjectionStrategy=DefaultInjectionStrategy.OPTIONAL)
+public class BrandLogoModel {
 
 @ValueMapValue
-private String others;
+private String logo;
+
 @ValueMapValue
-private String othersimage;
-public String getOthers() {
-	return others;
-}
-public String getOthersimage() {
-	return othersimage;
+private String ads;
+
+public String getLogo() {
+	return logo;
 }
 
+public String getAds() {
+	return ads;
+}
+
+@PostConstruct
+protected void init() {
+
+}
 }

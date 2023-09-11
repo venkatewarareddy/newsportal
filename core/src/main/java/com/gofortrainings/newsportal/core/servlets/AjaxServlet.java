@@ -33,30 +33,28 @@ throws ServletException,IOException{
 	ResourceResolver resolver=request.getResourceResolver();
 	Resource nodeRes=resolver.getResource("/content/ajaxcall");
 	 Resource resource=request.getResource();
-	  System.out.println(request.getParameter("text"));
+	 System.out.println(request.getParameter("text"));
 	 String text = "some text";
-
 	    response.setContentType("text/plain");  // Set content type of the response so that jQuery knows what it can expect.
 	    response.setCharacterEncoding("UTF-8"); // You want world domination, huh?
 	    response.getWriter().write(text);       // Write response body.
 	//JCR
 	
-	//Node infoNode=nodeRes.adaptTo(Node.class);
-	//infoNode.getProperties("name");
-	//infoNode.setProperty("textNode","call");
+	Node infoNode=nodeRes.adaptTo(Node.class);
+	infoNode.getProperties("name");
+	infoNode.setProperty("textNode","call");
 	
 	//set some property to node or save data
 	//Sling
-	/*ValueMap infoVM=nodeRes.getValueMap();
+	ValueMap infoVM=nodeRes.getValueMap();
 	infoVM.get("name", String.class);
 	
 	ModifiableValueMap map = nodeRes.adaptTo(ModifiableValueMap.class);
-	map.put("modified", "value");*/
+	map.put("modified", "value");
 	
       nodeRes.getResourceResolver().commit();
 	
-	
-	//response.getWriter().write("Title =" +resource.adaptTo(ValueMap.class).get("jcr:title"));
+	response.getWriter().write("Title =" +resource.adaptTo(ValueMap.class).get("jcr:title"));
 	}
 	catch(Exception e){
 	log.info("There is an error in Newsportalajax call: " + e.getMessage());
